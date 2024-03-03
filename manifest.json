@@ -3,11 +3,17 @@
   "name": "Взлом Сетевого города",
   "description": "Удаляет disable в input ",
   "version": "1.0",
-  "content_scripts": [{
-    "js": ["plugin.js"]
-  }],
   "permissions": ["storage"],
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["src/main.js"],
+      "matches": [
+        "https://www.google.com/*",
+        "https://poo.tomedu.ru/*"
+      ]
+    }
+  ]
 }
